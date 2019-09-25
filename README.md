@@ -1,3 +1,10 @@
+I started my code with the Requests example forked here. I also added Boost IOStreams module as a requirement.
+Install with
+
+'''
+sudo apt-get install libboost-iostreams-dev
+'''
+
 # C++ Requests Example
 
 [![Travis Build Status](https://travis-ci.org/whoshuu/cpr-example.svg?branch=master)](https://travis-ci.org/whoshuu/cpr-example) [![Appveyor Build Status](https://ci.appveyor.com/api/projects/status/l7c4yti84r9i87ys?svg=true)](https://ci.appveyor.com/project/whoshuu/cpr-example)

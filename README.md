@@ -1,9 +1,9 @@
 I started my code with the Requests example forked here. I also added Boost IOStreams module as a requirement.
 Install with
 
-'''
+```
 sudo apt-get install libboost-iostreams-dev
-'''
+```
 
 # C++ Requests Example
 

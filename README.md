@@ -1,9 +1,16 @@
+Status: this code gets a simple map from the Overpass OpenStreetMaps API, turns it into a nice graph, and queries
+elevations using a raster, and prints out the elevations it queried.
+
 I started my code with the Requests example forked here. I also added Boost IOStreams module as a requirement.
 Install with
 
 ```
 sudo apt-get install libboost-iostreams-dev
 ```
+
+Also, you'll need the usgs_ned_13_n34w085_gridfloat.flt file from
+[this .zip folder](https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/13/GridFloat/USGS_NED_13_n34w085_GridFloat.zip)
+in this main project folder.
 
 # C++ Requests Example
 

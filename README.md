@@ -1,5 +1,5 @@
-Status: this code gets a simple map from the Overpass OpenStreetMaps API, turns it into a nice graph, and queries
-graphElevations using a raster, and prints out the graphElevations it queried.
+Status: this code gets a simple map from the Overpass OpenStreetMaps API, turns it into a nice graph, queries
+elevations using a raster, and prints out the elevations it queried.
 
 I started my code with the Requests example forked here. I also added Boost IOStreams module as a requirement.
 Install with

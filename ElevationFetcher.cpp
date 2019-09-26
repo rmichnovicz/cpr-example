@@ -1,5 +1,5 @@
 #include <iostream>
-#include "ElevationFetcher.h.old"
+#include "ElevationFetcher.h"
 #include <math.h>
 
 //
@@ -65,23 +65,23 @@ ElevationFetcher::ElevationFetcher(const char* folderName) {
 //    return elevations;
 //}
 
-//vector<float> ElevationFetcher::getElevations(const vector<pair<int, int>>& latLngs) {
-//    vector<float> elevations(latLngs.size());
-//    int i = 0;
-//    // Not sure why normal iteration won't work?
-////    unordered_set<tuple<int, int>, hash_pair>::iterator itr;
-////    int lat, lng;
-////    for (itr = latLngs.begin(); itr != latLngs.end(); itr++)
-//    for (auto [lat, lng] : latLngs)
-//    {
-//
-//        // Thanks to padding on raster files, we can just use simple rounding
-////        tie(lat, lng) = (*itr);
-//        poBand->RasterIO( GF_Read, lng, lat, 1, 1,
-//                          &elevations[i], 1, 1, GDT_Float32,
-//                          0, 0 );
-//        i++;
-//    }
-//    return elevations;
-//}
-#include "ElevationFetcher.h.old"
+vector<float> ElevationFetcher::getElevations(const vector<pair<int, int>>& latLngs) {
+    vector<float> elevations(latLngs.size());
+    int i = 0;
+    // Not sure why normal iteration won't work?
+//    unordered_set<tuple<int, int>, hash_pair>::iterator itr;
+//    int lat, lng;
+//    for (itr = latLngs.begin(); itr != latLngs.end(); itr++)
+    for (auto [lat, lng] : latLngs)
+    {
+
+        // Thanks to padding on raster files, we can just use simple rounding
+//        tie(lat, lng) = (*itr);
+        poBand->RasterIO( GF_Read, lng, lat, 1, 1,
+                          &elevations[i], 1, 1, GDT_Float32,
+                          0, 0 );
+        i++;
+    }
+    return elevations;
+}
+#include "ElevationFetcher.h"

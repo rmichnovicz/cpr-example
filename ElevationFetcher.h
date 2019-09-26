@@ -21,7 +21,7 @@ class ElevationFetcher {
     double pixelY;
     GDALRasterBand  *poBand;
         explicit ElevationFetcher(const char* folderName);
-//        vector<float> getElevations(const vector<tuple<double, double>>& latLngs);
+        vector<float> getElevations(const vector<pair<int, int>>& latLngs);
 //        vector<float> getElevations(const unordered_set<pair<int, int>, hash_pair>& latLngs);
 };
 

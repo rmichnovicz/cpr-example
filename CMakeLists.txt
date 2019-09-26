@@ -32,13 +32,15 @@ endif()
 add_subdirectory(opt)
 find_package(Boost COMPONENTS iostreams REQUIRED)
 
-add_executable(example example.cpp Api.cpp Api.h hash_pair.cpp hash_pair.h GridfloatReader.cpp GridfloatReader.h)
+add_executable(example example.cpp Api.cpp Api.h GridfloatReader.cpp GridfloatReader.h)
 target_link_libraries(example ${CPR_LIBRARIES})
+
 #set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake-modules)
 #set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} $/usr/include/gdal)
 #find_package(GDAL REQUIRED)
 #include_directories( include ${GDAL_INCLUDE_DIRS})
 #message("GDAL DIR: ${GDAL_INCLUDE_DIRS}")
 #target_link_libraries( example ${GDAL_LIBRARIES})
+
 target_link_libraries(example ${Boost_LIBRARIES})
 include_directories(${CPR_INCLUDE_DIRS} ${JSON_INCLUDE_DIRS})
